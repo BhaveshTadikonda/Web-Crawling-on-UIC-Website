@@ -13,7 +13,7 @@ from nltk.corpus import stopwords
 l=[]
 inverted_index={}
 doc_tokens={}
-for filename in os.listdir("C:\\Users\\SRI VISHNU\\Desktop\\Masters\\2nd sem\\IR\\final project\\CrawledData"):
+for filename in os.listdir("CrawledData"):
     l.append(filename)
 
 
@@ -31,7 +31,7 @@ def extract():
     ps = PorterStemmer()
     stop_words = set(stopwords.words('english'))
     for filename in l:
-        d = open("C:\\Users\\SRI VISHNU\\Desktop\\Masters\\2nd sem\\IR\\final project\\CrawledData"+"\\"+filename,"r",encoding="utf-8") 
+        d = open("final project\\CrawledData"+"\\"+filename,"r",encoding="utf-8") 
         html=d.read()
         text=text_html(html)
         
